@@ -1,0 +1,73 @@
+
+</html>
+<!-- upload_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translated Video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+           
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        video {
+          
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Translated Video </h2>
+    {% if output_path %}
+    
+    <!-- If it's a video, you can embed it -->
+    <video controls  height="300px">
+        <source src="../../media/{{ output_path }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h4>Transcript of original video:</h4>
+    <p>{{transcript}}</p>
+    <h4>Transcript of Translated video:</h4>
+    <p>{{translated_text}}</p>
+{% else %}
+    <p>No output available.</p>
+
+{% endif %}
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+    

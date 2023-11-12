@@ -1,5 +1,5 @@
 Django==4.2.7
-gTTS==2.4.0
-moviepy==1.0.3
-SpeechRecognition==3.10.0
-translate==3.6.1
+gTTS
+moviepy
+SpeechRecognition
+translate
